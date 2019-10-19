@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.author = { "Allan Stejlborg" => "allan@stejlborg.dk" }
   spec.source = { :git => "https://github.com/allanstejlborg/FormValidator.git", :tag => "#{spec.version}" }
   spec.platform = :ios, '11.0'
-  spec.source_files = "Source/FormValidator/**/*.swift"
+  spec.source_files = "Pod/FormValidator/Source/**/*.swift"
   spec.swift_versions = ['5.0']
 
 end

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2BC01230235B66BE006102DA /* FormValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC01226235B66BE006102DA /* FormValidator.framework */; };
-		2BC01235235B66BE006102DA /* FormValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC01234235B66BE006102DA /* FormValidatorTests.swift */; };
 		2BC01237235B66BE006102DA /* FormValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BC01229235B66BE006102DA /* FormValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BC01242235B7960006102DA /* ValidatableControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC01241235B7960006102DA /* ValidatableControl.swift */; };
 		2BC01244235B798D006102DA /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC01243235B798D006102DA /* ValidationRule.swift */; };
@@ -43,7 +42,6 @@
 		2BC01229235B66BE006102DA /* FormValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FormValidator.h; sourceTree = "<group>"; };
 		2BC0122A235B66BE006102DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BC0122F235B66BE006102DA /* FormValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BC01234235B66BE006102DA /* FormValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidatorTests.swift; sourceTree = "<group>"; };
 		2BC01236235B66BE006102DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BC01241235B7960006102DA /* ValidatableControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableControl.swift; sourceTree = "<group>"; };
 		2BC01243235B798D006102DA /* ValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 		2BC01233235B66BE006102DA /* FormValidatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				2BC01234235B66BE006102DA /* FormValidatorTests.swift */,
 				2BC01236235B66BE006102DA /* Info.plist */,
 			);
 			path = FormValidatorTests;
@@ -298,7 +295,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BC01235235B66BE006102DA /* FormValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +361,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -423,7 +419,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

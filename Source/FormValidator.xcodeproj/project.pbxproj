@@ -10,6 +10,22 @@
 		2BC01230235B66BE006102DA /* FormValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC01226235B66BE006102DA /* FormValidator.framework */; };
 		2BC01235235B66BE006102DA /* FormValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC01234235B66BE006102DA /* FormValidatorTests.swift */; };
 		2BC01237235B66BE006102DA /* FormValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BC01229235B66BE006102DA /* FormValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BC01242235B7960006102DA /* ValidatableControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC01241235B7960006102DA /* ValidatableControl.swift */; };
+		2BC01244235B798D006102DA /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC01243235B798D006102DA /* ValidationRule.swift */; };
+		2BC01246235B79B9006102DA /* ErrorPresentableControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC01245235B79B9006102DA /* ErrorPresentableControl.swift */; };
+		2BC01249235B79F2006102DA /* ValidationRuleRequired.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC01248235B79EF006102DA /* ValidationRuleRequired.swift */; };
+		2BC0124B235B7A05006102DA /* ValidationRuleLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0124A235B7A05006102DA /* ValidationRuleLength.swift */; };
+		2BC0124D235B7A23006102DA /* ValidationRulePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0124C235B7A23006102DA /* ValidationRulePattern.swift */; };
+		2BC0124F235B7A4A006102DA /* ValidationRuleEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0124E235B7A4A006102DA /* ValidationRuleEqual.swift */; };
+		2BC01252235B7A9B006102DA /* UITextField+ValidatableControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC01251235B7A9B006102DA /* UITextField+ValidatableControl.swift */; };
+		2BC01254235B7ABE006102DA /* UISwitch+ValidatableControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC01253235B7ABE006102DA /* UISwitch+ValidatableControl.swift */; };
+		2BC01256235B7AE4006102DA /* UISlider+ValidatableControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC01255235B7AE4006102DA /* UISlider+ValidatableControl.swift */; };
+		2BC0125D235B7C5C006102DA /* FormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0125C235B7C5C006102DA /* FormValidator.swift */; };
+		2BC0125F235B7C8B006102DA /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0125E235B7C8B006102DA /* Validator.swift */; };
+		2BC01260235B7D15006102DA /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC01259235B7B60006102DA /* ValidationResult.swift */; };
+		2BC01262235B7D1B006102DA /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC01258235B7B45006102DA /* ValidationError.swift */; };
+		2BC01263235B7D1E006102DA /* ValidationRuleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0125A235B7BEC006102DA /* ValidationRuleType.swift */; };
+		2BC01264235B7D20006102DA /* ValidationPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0125B235B7C14006102DA /* ValidationPattern.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +45,22 @@
 		2BC0122F235B66BE006102DA /* FormValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC01234235B66BE006102DA /* FormValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidatorTests.swift; sourceTree = "<group>"; };
 		2BC01236235B66BE006102DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BC01241235B7960006102DA /* ValidatableControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableControl.swift; sourceTree = "<group>"; };
+		2BC01243235B798D006102DA /* ValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
+		2BC01245235B79B9006102DA /* ErrorPresentableControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresentableControl.swift; sourceTree = "<group>"; };
+		2BC01248235B79EF006102DA /* ValidationRuleRequired.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRuleRequired.swift; sourceTree = "<group>"; };
+		2BC0124A235B7A05006102DA /* ValidationRuleLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRuleLength.swift; sourceTree = "<group>"; };
+		2BC0124C235B7A23006102DA /* ValidationRulePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRulePattern.swift; sourceTree = "<group>"; };
+		2BC0124E235B7A4A006102DA /* ValidationRuleEqual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRuleEqual.swift; sourceTree = "<group>"; };
+		2BC01251235B7A9B006102DA /* UITextField+ValidatableControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+ValidatableControl.swift"; sourceTree = "<group>"; };
+		2BC01253235B7ABE006102DA /* UISwitch+ValidatableControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISwitch+ValidatableControl.swift"; sourceTree = "<group>"; };
+		2BC01255235B7AE4006102DA /* UISlider+ValidatableControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISlider+ValidatableControl.swift"; sourceTree = "<group>"; };
+		2BC01258235B7B45006102DA /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		2BC01259235B7B60006102DA /* ValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
+		2BC0125A235B7BEC006102DA /* ValidationRuleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRuleType.swift; sourceTree = "<group>"; };
+		2BC0125B235B7C14006102DA /* ValidationPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationPattern.swift; sourceTree = "<group>"; };
+		2BC0125C235B7C5C006102DA /* FormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidator.swift; sourceTree = "<group>"; };
+		2BC0125E235B7C8B006102DA /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +103,12 @@
 		2BC01228235B66BE006102DA /* FormValidator */ = {
 			isa = PBXGroup;
 			children = (
+				2BC0125C235B7C5C006102DA /* FormValidator.swift */,
+				2BC0125E235B7C8B006102DA /* Validator.swift */,
+				2BC01257235B7B3B006102DA /* Models */,
+				2BC01250235B7A7C006102DA /* Extensions */,
+				2BC01240235B7903006102DA /* Protocols */,
+				2BC01247235B79D6006102DA /* ValidationRules */,
 				2BC01229235B66BE006102DA /* FormValidator.h */,
 				2BC0122A235B66BE006102DA /* Info.plist */,
 			);
@@ -84,6 +122,48 @@
 				2BC01236235B66BE006102DA /* Info.plist */,
 			);
 			path = FormValidatorTests;
+			sourceTree = "<group>";
+		};
+		2BC01240235B7903006102DA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2BC01241235B7960006102DA /* ValidatableControl.swift */,
+				2BC01245235B79B9006102DA /* ErrorPresentableControl.swift */,
+				2BC01243235B798D006102DA /* ValidationRule.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2BC01247235B79D6006102DA /* ValidationRules */ = {
+			isa = PBXGroup;
+			children = (
+				2BC01248235B79EF006102DA /* ValidationRuleRequired.swift */,
+				2BC0124A235B7A05006102DA /* ValidationRuleLength.swift */,
+				2BC0124C235B7A23006102DA /* ValidationRulePattern.swift */,
+				2BC0124E235B7A4A006102DA /* ValidationRuleEqual.swift */,
+			);
+			path = ValidationRules;
+			sourceTree = "<group>";
+		};
+		2BC01250235B7A7C006102DA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2BC01251235B7A9B006102DA /* UITextField+ValidatableControl.swift */,
+				2BC01253235B7ABE006102DA /* UISwitch+ValidatableControl.swift */,
+				2BC01255235B7AE4006102DA /* UISlider+ValidatableControl.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2BC01257235B7B3B006102DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2BC01259235B7B60006102DA /* ValidationResult.swift */,
+				2BC01258235B7B45006102DA /* ValidationError.swift */,
+				2BC0125A235B7BEC006102DA /* ValidationRuleType.swift */,
+				2BC0125B235B7C14006102DA /* ValidationPattern.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +228,7 @@
 				TargetAttributes = {
 					2BC01225235B66BE006102DA = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 					2BC0122E235B66BE006102DA = {
 						CreatedOnToolsVersion = 10.3;
@@ -194,6 +275,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BC0125D235B7C5C006102DA /* FormValidator.swift in Sources */,
+				2BC01260235B7D15006102DA /* ValidationResult.swift in Sources */,
+				2BC0124B235B7A05006102DA /* ValidationRuleLength.swift in Sources */,
+				2BC01246235B79B9006102DA /* ErrorPresentableControl.swift in Sources */,
+				2BC01254235B7ABE006102DA /* UISwitch+ValidatableControl.swift in Sources */,
+				2BC01242235B7960006102DA /* ValidatableControl.swift in Sources */,
+				2BC01249235B79F2006102DA /* ValidationRuleRequired.swift in Sources */,
+				2BC0124F235B7A4A006102DA /* ValidationRuleEqual.swift in Sources */,
+				2BC0124D235B7A23006102DA /* ValidationRulePattern.swift in Sources */,
+				2BC01262235B7D1B006102DA /* ValidationError.swift in Sources */,
+				2BC0125F235B7C8B006102DA /* Validator.swift in Sources */,
+				2BC01264235B7D20006102DA /* ValidationPattern.swift in Sources */,
+				2BC01244235B798D006102DA /* ValidationRule.swift in Sources */,
+				2BC01252235B7A9B006102DA /* UITextField+ValidatableControl.swift in Sources */,
+				2BC01263235B7D1E006102DA /* ValidationRuleType.swift in Sources */,
+				2BC01256235B7AE4006102DA /* UISlider+ValidatableControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +438,7 @@
 		2BC0123B235B66BF006102DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -358,6 +456,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dk.stejlborg.FormValidator;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +465,7 @@
 		2BC0123C235B66BF006102DA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -391,6 +491,7 @@
 		2BC0123E235B66BF006102DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G7V9NR2ZXA;
 				INFOPLIST_FILE = FormValidatorTests/Info.plist;
@@ -409,6 +510,7 @@
 		2BC0123F235B66BF006102DA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G7V9NR2ZXA;
 				INFOPLIST_FILE = FormValidatorTests/Info.plist;

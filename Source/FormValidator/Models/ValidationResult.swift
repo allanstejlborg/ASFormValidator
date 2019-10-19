@@ -1,6 +1,6 @@
 import Foundation
 
-enum ValidationResult {
+public enum ValidationResult {
     case valid
     case invalid(errors: [ValidationError])
 }

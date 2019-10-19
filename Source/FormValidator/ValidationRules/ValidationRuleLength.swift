@@ -1,6 +1,6 @@
 import Foundation
 
-struct ValidationRuleLength: ValidationRule {
+public struct ValidationRuleLength: ValidationRule {
     
     public enum LengthType {
         case characters
@@ -9,10 +9,10 @@ struct ValidationRuleLength: ValidationRule {
         case unicodeScalars
     }
     
-    let min: Int
-    let max: Int
-    let lengthType: LengthType
-    let error: ValidationError
+    private let min: Int
+    private let max: Int
+    private let lengthType: LengthType
+    public let error: ValidationError
     
     public init(min: Int = 0, max: Int = Int.max, lengthType: LengthType = .characters, error: ValidationError) {
         self.min = min

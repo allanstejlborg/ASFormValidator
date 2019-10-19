@@ -1,6 +1,6 @@
 import Foundation
 
-enum ValidationRuleType {
+public enum ValidationRuleType {
     case required
     case minLenght(_ minLenght: Int)
     case maxLenght(_ maxLenght: Int)

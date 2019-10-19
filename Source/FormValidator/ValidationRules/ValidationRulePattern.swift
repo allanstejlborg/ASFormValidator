@@ -1,16 +1,16 @@
 import Foundation
 
-struct ValidationRulePattern: ValidationRule {
+public struct ValidationRulePattern: ValidationRule {
     
-    let pattern: String
-    let error: ValidationError
+    private let pattern: String
+    public let error: ValidationError
     
     public init(pattern: String, error: ValidationError) {
         self.pattern = pattern
         self.error = error
     }
     
-    func validate<T>(value: T?) -> Bool {
+    public func validate<T>(value: T?) -> Bool {
         guard let value = value as? String else {
             return false
         }

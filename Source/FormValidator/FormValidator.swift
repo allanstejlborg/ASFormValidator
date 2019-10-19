@@ -1,8 +1,8 @@
 import Foundation
 
-class FormValidator {
+public class FormValidator {
     
-    typealias Control = ValidatableControl & ErrorPresentableControl
+    public typealias Control = ValidatableControl & ErrorPresentableControl
     
     private class FormItem {
         let control: Control
@@ -19,7 +19,7 @@ class FormValidator {
     /**
      Validate rules in registered controls.
      */
-    func validate(_ completion: (ValidationResult) -> Void) {
+    public func validate(_ completion: (ValidationResult) -> Void) {
         
         var validationErrors: [ValidationError] = []
         
@@ -38,7 +38,7 @@ class FormValidator {
     /**
      Register a validation rule for a control.
      */
-    func register(_ control: Control, rule: ValidationRule) {
+    public func register(_ control: Control, rule: ValidationRule) {
         
         if let item = items.first(where: { $0.control == control }) {
             item.validationRules.append(rule)
@@ -50,7 +50,7 @@ class FormValidator {
     /**
      Register multiple validation rules for a control.
      */
-    func register(_ control: Control, type: ValidationRuleType, message: String) {
+    public func register(_ control: Control, type: ValidationRuleType, message: String) {
         
         let rule = Validator.validationRule(for: type, error: ValidationError(message: message))
         register(control, rule: rule)

@@ -1,6 +1,6 @@
 import Foundation
 
-enum ValidationPattern {
+public enum ValidationPattern {
     case email
     
     var pattern: String {

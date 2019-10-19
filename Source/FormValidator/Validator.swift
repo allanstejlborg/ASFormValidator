@@ -1,8 +1,8 @@
 import Foundation
 
-class Validator {
+public class Validator {
     
-    static func validationRule(for type: ValidationRuleType, error: ValidationError) -> ValidationRule {
+    public static func validationRule(for type: ValidationRuleType, error: ValidationError) -> ValidationRule {
         
         switch type {
         case .required:
@@ -22,12 +22,12 @@ class Validator {
         }
     }
     
-    static func validate<T>(value: T?, rule: ValidationRule) -> ValidationResult {
+    public static func validate<T>(value: T?, rule: ValidationRule) -> ValidationResult {
         
         return validate(value: value, rules: [rule])
     }
     
-    static func validate<T>(value: T?, rules: [ValidationRule]) -> ValidationResult {
+    public static func validate<T>(value: T?, rules: [ValidationRule]) -> ValidationResult {
         
         let errors = rules.filter { !$0.validate(value: value) }.map { $0.error }
         return errors.isEmpty ? .valid : .invalid(errors: errors)

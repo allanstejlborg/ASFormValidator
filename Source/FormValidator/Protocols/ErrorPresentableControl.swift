@@ -1,5 +1,5 @@
 import UIKit
 
-protocol ErrorPresentableControl where Self: UIControl {
+public protocol ErrorPresentableControl where Self: UIControl {
     func present(validationResult: ValidationResult)
 }

@@ -1,5 +1,5 @@
 import Foundation
 
-struct ValidationError: Error {
+public struct ValidationError: Error {
     let message: String
 }

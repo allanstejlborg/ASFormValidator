@@ -16,4 +16,5 @@ public enum ValidationType {
     case pattern(_ pattern: String)
     case email
     case equal(_ control: ValidatableControl)
+    case boolean(_ state: Bool)
 }

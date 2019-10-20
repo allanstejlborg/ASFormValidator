@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmationTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
+    @IBOutlet weak var termsSwitch: UISwitch!
     
     private var validator: FormValidator!
     
@@ -34,6 +35,7 @@ class ViewController: UIViewController {
         validator.register(passwordConfirmationTextField, type: .required, message: "Confirmation password is required")
         validator.register(passwordConfirmationTextField, type: .equal(passwordTextField), message: "Confirmation password does not match")
         validator.register(priceTextField, type: .decimalRange(1, 100), message: "Price must be a decimal number between 1 and 100")
+        validator.register(termsSwitch, type: .boolean(true), message: "The terms must be accepted")
     }
     
     @IBAction func submitButtonPressed(_ sender: Any) {
@@ -55,6 +57,11 @@ extension UITextField: ErrorPresentableControl {
         } else {
             backgroundColor = .clear
         }
+    }
+}
+
+extension UISwitch: ErrorPresentableControl {
+    public func present(validationResult: ValidationResult) {
     }
 }
 

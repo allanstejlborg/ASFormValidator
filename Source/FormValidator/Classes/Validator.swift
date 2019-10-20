@@ -35,6 +35,8 @@ public class Validator {
             return ValidationRulePattern(pattern: ValidationPattern.email.pattern, error: error)
         case .equal(let control):
             return ValidationRuleEqual(control: control, error: error)
+        case .boolean(let state):
+            return ValidationRuleBoolean(state: state, error: error)
         }
     }
     

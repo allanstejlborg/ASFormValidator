@@ -22,10 +22,10 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l77-fc-nL9">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="408"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="455"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1hE-2B-Ebg">
-                                                <rect key="frame" x="16" y="16" width="382" height="376"/>
+                                                <rect key="frame" x="16" y="16" width="382" height="423"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DZU-Aa-IgP">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
@@ -66,8 +66,22 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kyp-qe-kWw">
+                                                        <rect key="frame" x="0.0" y="336" width="382" height="31"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accept terms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APQ-Th-XBw">
+                                                                <rect key="frame" x="0.0" y="0.0" width="333" height="31"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pzE-ma-gkA">
+                                                                <rect key="frame" x="333" y="0.0" width="51" height="31"/>
+                                                            </switch>
+                                                        </subviews>
+                                                    </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhV-nJ-se0">
-                                                        <rect key="frame" x="0.0" y="336" width="382" height="40"/>
+                                                        <rect key="frame" x="0.0" y="383" width="382" height="40"/>
                                                         <color key="backgroundColor" red="0.20609647040000001" green="0.4718315005" blue="0.96441000700000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <state key="normal" title="Submit"/>
@@ -121,6 +135,7 @@
                         <outlet property="passwordConfirmationTextField" destination="dpq-1I-eTh" id="3U1-r9-8A5"/>
                         <outlet property="passwordTextField" destination="biE-VA-mZp" id="qgA-Wa-gSp"/>
                         <outlet property="priceTextField" destination="tZh-lV-oWy" id="zws-7n-fsw"/>
+                        <outlet property="termsSwitch" destination="pzE-ma-gkA" id="d9Y-62-7KN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

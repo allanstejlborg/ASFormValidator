@@ -48,11 +48,19 @@ public class FormValidator {
     }
     
     /**
-     Register multiple validation rules for a control.
+     Register a validation rules for a control by type and error message.
      */
-    public func register(_ control: Control, type: ValidationRuleType, message: String) {
+    public func register(_ control: Control, type: ValidationType, message: String) {
         
         let rule = Validator.validationRule(for: type, error: ValidationError(message: message))
         register(control, rule: rule)
+    }
+    
+    /**
+     Unregister all validation rules for a control.
+     */
+    public func unregister(_ control: Control) {
+        
+        items.removeAll(where: { $0.control == control })
     }
 }

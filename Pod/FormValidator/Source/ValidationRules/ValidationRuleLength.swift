@@ -9,12 +9,12 @@ public struct ValidationRuleLength: ValidationRule {
         case unicodeScalars
     }
     
-    private let min: Int
-    private let max: Int
+    private let min: Int?
+    private let max: Int?
     private let lengthType: LengthType
     public let error: ValidationError
     
-    public init(min: Int = 0, max: Int = Int.max, lengthType: LengthType = .characters, error: ValidationError) {
+    public init(min: Int?, max: Int?, lengthType: LengthType = .characters, error: ValidationError) {
         self.min = min
         self.max = max
         self.lengthType = lengthType
@@ -38,6 +38,14 @@ public struct ValidationRuleLength: ValidationRule {
             length = value.unicodeScalars.count
         }
         
-        return length >= min && length <= max
+        if let min = min, length < min {
+            return false
+        }
+        
+        if let max = max, length > max {
+            return false
+        }
+        
+        return true
     }
 }

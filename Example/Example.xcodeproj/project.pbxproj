@@ -14,7 +14,7 @@
 		2BC0127D235B8D14006102DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC0127B235B8D14006102DA /* LaunchScreen.storyboard */; };
 		2BC012C3235B8FC5006102DA /* FormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC012AF235B8FC5006102DA /* FormValidator.swift */; };
 		2BC012C4235B8FC5006102DA /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC012B0235B8FC5006102DA /* Validator.swift */; };
-		2BC012C5235B8FC5006102DA /* ValidationRuleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC012B2235B8FC5006102DA /* ValidationRuleType.swift */; };
+		2BC012C5235B8FC5006102DA /* ValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC012B2235B8FC5006102DA /* ValidationType.swift */; };
 		2BC012C6235B8FC5006102DA /* ValidationPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC012B3235B8FC5006102DA /* ValidationPattern.swift */; };
 		2BC012C7235B8FC5006102DA /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC012B4235B8FC5006102DA /* ValidationError.swift */; };
 		2BC012C8235B8FC5006102DA /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC012B5235B8FC5006102DA /* ValidationResult.swift */; };
@@ -28,6 +28,8 @@
 		2BC012D0235B8FC5006102DA /* ErrorPresentableControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC012C0235B8FC5006102DA /* ErrorPresentableControl.swift */; };
 		2BC012D1235B8FC5006102DA /* ValidatableControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC012C1235B8FC5006102DA /* ValidatableControl.swift */; };
 		2BC012D2235B8FC5006102DA /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC012C2235B8FC5006102DA /* ValidationRule.swift */; };
+		2BC012FA235C3C87006102DA /* ValidationRuleNumeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC012F9235C3C87006102DA /* ValidationRuleNumeric.swift */; };
+		2BC012FC235C3C9F006102DA /* ValidationRuleDecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC012FB235C3C9F006102DA /* ValidationRuleDecimal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +42,7 @@
 		2BC0127E235B8D14006102DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BC012AF235B8FC5006102DA /* FormValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormValidator.swift; sourceTree = "<group>"; };
 		2BC012B0235B8FC5006102DA /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
-		2BC012B2235B8FC5006102DA /* ValidationRuleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRuleType.swift; sourceTree = "<group>"; };
+		2BC012B2235B8FC5006102DA /* ValidationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationType.swift; sourceTree = "<group>"; };
 		2BC012B3235B8FC5006102DA /* ValidationPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationPattern.swift; sourceTree = "<group>"; };
 		2BC012B4235B8FC5006102DA /* ValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
 		2BC012B5235B8FC5006102DA /* ValidationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
@@ -54,6 +56,8 @@
 		2BC012C0235B8FC5006102DA /* ErrorPresentableControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorPresentableControl.swift; sourceTree = "<group>"; };
 		2BC012C1235B8FC5006102DA /* ValidatableControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatableControl.swift; sourceTree = "<group>"; };
 		2BC012C2235B8FC5006102DA /* ValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
+		2BC012F9235C3C87006102DA /* ValidationRuleNumeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRuleNumeric.swift; sourceTree = "<group>"; };
+		2BC012FB235C3C9F006102DA /* ValidationRuleDecimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRuleDecimal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +118,7 @@
 		2BC012B1235B8FC5006102DA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2BC012B2235B8FC5006102DA /* ValidationRuleType.swift */,
+				2BC012B2235B8FC5006102DA /* ValidationType.swift */,
 				2BC012B3235B8FC5006102DA /* ValidationPattern.swift */,
 				2BC012B4235B8FC5006102DA /* ValidationError.swift */,
 				2BC012B5235B8FC5006102DA /* ValidationResult.swift */,
@@ -138,6 +142,8 @@
 				2BC012BB235B8FC5006102DA /* ValidationRuleEqual.swift */,
 				2BC012BC235B8FC5006102DA /* ValidationRulePattern.swift */,
 				2BC012BD235B8FC5006102DA /* ValidationRuleRequired.swift */,
+				2BC012F9235C3C87006102DA /* ValidationRuleNumeric.swift */,
+				2BC012FB235C3C9F006102DA /* ValidationRuleDecimal.swift */,
 				2BC012BE235B8FC5006102DA /* ValidationRuleLength.swift */,
 			);
 			path = ValidationRules;
@@ -227,6 +233,7 @@
 				2BC012C4235B8FC5006102DA /* Validator.swift in Sources */,
 				2BC012C6235B8FC5006102DA /* ValidationPattern.swift in Sources */,
 				2BC012C7235B8FC5006102DA /* ValidationError.swift in Sources */,
+				2BC012FA235C3C87006102DA /* ValidationRuleNumeric.swift in Sources */,
 				2BC012D1235B8FC5006102DA /* ValidatableControl.swift in Sources */,
 				2BC012C9235B8FC5006102DA /* UISwitch+ValidatableControl.swift in Sources */,
 				2BC012C8235B8FC5006102DA /* ValidationResult.swift in Sources */,
@@ -237,8 +244,9 @@
 				2BC012D0235B8FC5006102DA /* ErrorPresentableControl.swift in Sources */,
 				2BC012C3235B8FC5006102DA /* FormValidator.swift in Sources */,
 				2BC01275235B8D13006102DA /* ViewController.swift in Sources */,
+				2BC012FC235C3C9F006102DA /* ValidationRuleDecimal.swift in Sources */,
 				2BC012CA235B8FC5006102DA /* UITextField+ValidatableControl.swift in Sources */,
-				2BC012C5235B8FC5006102DA /* ValidationRuleType.swift in Sources */,
+				2BC012C5235B8FC5006102DA /* ValidationType.swift in Sources */,
 				2BC012CE235B8FC5006102DA /* ValidationRuleRequired.swift in Sources */,
 				2BC01273235B8D13006102DA /* AppDelegate.swift in Sources */,
 				2BC012CC235B8FC5006102DA /* ValidationRuleEqual.swift in Sources */,

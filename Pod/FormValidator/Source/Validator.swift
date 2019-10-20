@@ -2,17 +2,33 @@ import Foundation
 
 public class Validator {
     
-    public static func validationRule(for type: ValidationRuleType, error: ValidationError) -> ValidationRule {
+    public static func validationRule(for type: ValidationType, error: ValidationError) -> ValidationRule {
         
         switch type {
         case .required:
             return ValidationRuleRequired(error: error)
-        case .minLenght(let minLength):
-            return ValidationRuleLength(min: minLength, max: Int.max, lengthType: .characters, error: error)
-        case .maxLenght(let maxLenght):
-            return ValidationRuleLength(min: Int.min, max: maxLenght, lengthType: .characters, error: error)
-        case .length(let min, let max):
-            return ValidationRuleLength(min: min, max: max, lengthType: .characters, error: error)
+        case .minLength(let minLength):
+            return ValidationRuleLength(min: minLength, max: nil, lengthType: .characters, error: error)
+        case .maxLength(let maxLength):
+            return ValidationRuleLength(min: nil, max: maxLength, lengthType: .characters, error: error)
+        case .length(let minLength, let maxLength):
+            return ValidationRuleLength(min: minLength, max: maxLength, lengthType: .characters, error: error)
+        case .numeric:
+            return ValidationRuleNumeric(min: nil, max: nil, error: error)
+        case .numericMin(let min):
+            return ValidationRuleNumeric(min: min, max: nil, error: error)
+        case .numericMax(let max):
+            return ValidationRuleNumeric(min: nil, max: max, error: error)
+        case .numericRange(let min, let max):
+            return ValidationRuleNumeric(min: min, max: max, error: error)
+        case .decimal:
+            return ValidationRuleDecimal(min: nil, max: nil, error: error)
+        case .decimalMin(let min):
+            return ValidationRuleDecimal(min: min, max: nil, error: error)
+        case .decimalMax(let max):
+            return ValidationRuleDecimal(min: nil, max: max, error: error)
+        case .decimalRange(let min, let max):
+            return ValidationRuleDecimal(min: min, max: max, error: error)
         case .pattern(let pattern):
             return ValidationRulePattern(pattern: pattern, error: error)
         case .email:

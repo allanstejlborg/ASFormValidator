@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name = "ASFormValidator"
-  spec.version = "0.0.1"
+  spec.version = "0.0.2"
   spec.summary = "Lightweight form validation in Swift"
   spec.homepage = "https://github.com/allanstejlborg/ASFormValidator"
   spec.license = "MIT"

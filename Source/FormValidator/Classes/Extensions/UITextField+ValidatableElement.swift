@@ -1,6 +1,6 @@
 import UIKit
 
-extension UITextField: ValidatableControl {
+extension UITextField: ValidatableElement {
     
     public func validate(rule: ValidationRule) -> ValidationResult {
         return Validator.validate(value: text, rule: rule)

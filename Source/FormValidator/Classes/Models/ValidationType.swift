@@ -15,6 +15,6 @@ public enum ValidationType {
     case decimalRange(_ min: Decimal, _ max: Decimal)
     case pattern(_ pattern: String)
     case email
-    case equal(_ control: ValidatableControl)
+    case equal(_ element: ValidatableElement)
     case boolean(_ state: Bool)
 }

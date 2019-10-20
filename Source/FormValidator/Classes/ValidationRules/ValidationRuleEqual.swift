@@ -2,17 +2,17 @@ import UIKit
 
 public struct ValidationRuleEqual: ValidationRule {
     
-    private let control: ValidatableControl
+    private let element: ValidatableElement
     public let error: ValidationError
     
-    public init(control: ValidatableControl, error: ValidationError) {
-        self.control = control
+    public init(element: ValidatableElement, error: ValidationError) {
+        self.element = element
         self.error = error
     }
     
     public func validate<T>(value: T?) -> Bool {
         guard let value = value as? String,
-            let textField = control as? UITextField,
+            let textField = element as? UITextField,
             let text = textField.text else {
                 return false
         }

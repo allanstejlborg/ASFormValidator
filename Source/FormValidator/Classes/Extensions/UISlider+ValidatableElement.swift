@@ -1,12 +1,12 @@
 import UIKit
 
-extension UISwitch: ValidatableControl {
+extension UISlider: ValidatableElement {
     
     public func validate(rule: ValidationRule) -> ValidationResult {
-        return Validator.validate(value: isOn, rule: rule)
+        return Validator.validate(value: value, rule: rule)
     }
     
     public func validate(rules: [ValidationRule]) -> ValidationResult {
-        return Validator.validate(value: isOn, rules: rules)
+        return Validator.validate(value: value, rules: rules)
     }
 }

@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordConfirmationTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var termsSwitch: UISwitch!
+    @IBOutlet weak var descriptionTextView: UITextView!
     
     private var validator: FormValidator!
     
@@ -35,6 +36,7 @@ class ViewController: UIViewController {
         validator.register(passwordConfirmationTextField, type: .required, message: "Confirmation password is required")
         validator.register(passwordConfirmationTextField, type: .equal(passwordTextField), message: "Confirmation password does not match")
         validator.register(priceTextField, type: .decimalRange(1, 100), message: "Price must be a decimal number between 1 and 100")
+        validator.register(descriptionTextView, type: .required, message: "A short description is required")
         validator.register(termsSwitch, type: .boolean(true), message: "The terms must be accepted")
     }
     
@@ -50,7 +52,7 @@ class ViewController: UIViewController {
 
 }
 
-extension UITextField: ErrorPresentableControl {
+extension UITextField: ErrorPresentableElement {
     public func present(validationResult: ValidationResult) {
         if case ValidationResult.invalid = validationResult {
             backgroundColor = .red
@@ -60,8 +62,12 @@ extension UITextField: ErrorPresentableControl {
     }
 }
 
-extension UISwitch: ErrorPresentableControl {
+extension UITextView: ErrorPresentableElement {
     public func present(validationResult: ValidationResult) {
+        if case ValidationResult.invalid = validationResult {
+            backgroundColor = .red
+        } else {
+            backgroundColor = .clear
+        }
     }
 }
-

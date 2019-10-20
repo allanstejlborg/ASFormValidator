@@ -1,6 +1,6 @@
 import UIKit
 
-public protocol ValidatableControl where Self: UIControl {
+public protocol ValidatableElement where Self: NSObject {
     func validate(rule: ValidationRule) -> ValidationResult
     func validate(rules: [ValidationRule]) -> ValidationResult
 }

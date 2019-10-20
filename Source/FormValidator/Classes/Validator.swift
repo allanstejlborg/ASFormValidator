@@ -33,8 +33,8 @@ public class Validator {
             return ValidationRulePattern(pattern: pattern, error: error)
         case .email:
             return ValidationRulePattern(pattern: ValidationPattern.email.pattern, error: error)
-        case .equal(let control):
-            return ValidationRuleEqual(control: control, error: error)
+        case .equal(let element):
+            return ValidationRuleEqual(element: element, error: error)
         case .boolean(let state):
             return ValidationRuleBoolean(state: state, error: error)
         }

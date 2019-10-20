@@ -2,14 +2,12 @@ import Foundation
 
 public class FormValidator {
     
-    public typealias Control = ValidatableControl & ErrorPresentableControl
-    
     private class FormItem {
-        let control: Control
+        let element: ValidatableElement
         var validationRules: [ValidationRule]
         
-        init(control: Control, validationRules: [ValidationRule]) {
-            self.control = control
+        init(element: ValidatableElement, validationRules: [ValidationRule]) {
+            self.element = element
             self.validationRules = validationRules
         }
     }
@@ -17,15 +15,18 @@ public class FormValidator {
     private var items: [FormItem] = []
     
     /**
-     Validate rules in registered controls.
+     Validate rules in registered elements.
      */
     public func validate(_ completion: (ValidationResult) -> Void) {
         
         var validationErrors: [ValidationError] = []
         
         items.forEach { item in
-            let result = item.control.validate(rules: item.validationRules)
-            item.control.present(validationResult: result)
+            let result = item.element.validate(rules: item.validationRules)
+            
+            if let element = item.element as? ErrorPresentableElement {
+                element.present(validationResult: result)
+            }
             
             if case ValidationResult.invalid(let errors) = result {
                 validationErrors.append(contentsOf: errors)
@@ -36,31 +37,31 @@ public class FormValidator {
     }
     
     /**
-     Register a validation rule for a control.
+     Register a validation rule for an element.
      */
-    public func register(_ control: Control, rule: ValidationRule) {
+    public func register(_ element: ValidatableElement, rule: ValidationRule) {
         
-        if let item = items.first(where: { $0.control == control }) {
+        if let item = items.first(where: { $0.element == element }) {
             item.validationRules.append(rule)
         } else {
-            items.append(FormItem(control: control, validationRules: [rule]))
+            items.append(FormItem(element: element, validationRules: [rule]))
         }
     }
     
     /**
-     Register a validation rules for a control by type and error message.
+     Register a validation rules for an element by type and error message.
      */
-    public func register(_ control: Control, type: ValidationType, message: String) {
+    public func register(_ element: ValidatableElement, type: ValidationType, message: String) {
         
         let rule = Validator.validationRule(for: type, error: ValidationError(message: message))
-        register(control, rule: rule)
+        register(element, rule: rule)
     }
     
     /**
-     Unregister all validation rules for a control.
+     Unregister all validation rules for an element.
      */
-    public func unregister(_ control: Control) {
+    public func unregister(_ element: ValidatableElement) {
         
-        items.removeAll(where: { $0.control == control })
+        items.removeAll(where: { $0.element == element })
     }
 }
